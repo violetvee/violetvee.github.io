@@ -2,6 +2,8 @@
 
 Deep learning is a subset of machine learning where artificial neural networks are trained to learn and make decisions or predictions about a given dataset. The neural networks consist of three or more layers of interconnected artificial neurons - known as hidden layers. The more hidden layers the network has, the deeper the network, and the "deeper" the learning. (IBM, n.d.) This multi-layered structure mimics the learning process of the brain.
 
+![](/images/artificial_neural_network.jpeg "The multi-layered structure of artificial neural networks used in deep learning (Levity AI, n.d.)"
+
 Deep learning differs from classical machine learning in the type of data that it works with and the methods in which it learns. In traditional machine learning algorithms, the feature extraction is often required to be performed by a domain expert. Whereas deep learning algorithms are able to learn these high-level features from data in an incremental manner and thus perform feature extraction automatically. (Nagdeve, 2020)
 As such, deep learning algorithms require less human intervention than classical machine learning algorithms. However, this also means that deep learning requires a lot more data than traditional machine learning algorithms to perform properly.
 
