@@ -9,7 +9,7 @@ Image caption: The multi-layered structure of artificial neural networks used in
 Deep learning differs from classical machine learning in the type of data that it works with and the methods in which it learns. In traditional machine learning algorithms, the feature extraction is often required to be performed by a domain expert. Whereas deep learning algorithms are able to learn these high-level features from data in an incremental manner and thus perform feature extraction automatically. (Nagdeve, 2020)
 As such, deep learning algorithms require less human intervention than classical machine learning algorithms. However, this also means that deep learning requires a lot more data than traditional machine learning algorithms to perform properly.
 
-![](/images/deep_learning_vs_machine_learning.jpeg)
+![](/images/deep_learning_vs_machine_learning.jpeg "The difference between traditional machine learning vs deep learning (Levity AI, n.d.).")
 
 Image caption: The difference between traditional machine learning vs deep learning (Levity AI, n.d.).
 
