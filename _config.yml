@@ -22,7 +22,8 @@ google_analytics:
 
 # Everything below here can be ignored, unless you want to change the theme entirely
 theme: 
-remote_theme: pages-themes/tactile@v0.2.0
+remote_theme: pages-themes/cayman@v0.2.0
+# pages-themes/tactile@v0.2.0
 plugins:
   - jekyll-feed
   - jekyll-gist
