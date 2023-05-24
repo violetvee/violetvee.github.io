@@ -7,7 +7,7 @@
 # https://learnxinyminutes.com/docs/yaml/
 
 title: Violet takes on fast.ai
-description: Come along with me as I venture into the mysterious rabbit hole that is Deep Learning with fast.ai! ❤
+description: Come along with me as I venture into the mysterious world of Deep Learning with fast.ai! ❤
 github_username: violetvee
 
 # Email and twitter are optional:
@@ -21,8 +21,8 @@ use_math:
 google_analytics:
 
 # Everything below here can be ignored, unless you want to change the theme entirely
-theme: minima
-# remote_theme: pages-themes/tactile@v0.2.0
+# theme: minima
+remote_theme: pages-themes/tactile@v0.2.0
 plugins:
   - jekyll-feed
   - jekyll-gist
