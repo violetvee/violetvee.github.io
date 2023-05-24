@@ -1,4 +1,4 @@
 # About
+Hi, I'm Violet - a final year mechatronic engineering student at UQ in Queensland, Australia. I'm currently taking ELEC4630, a computer vision and image processing course at UQ and this is a blog about my experiences taking the fast.ai course by Jeremy Howard as part of ELEC4630. 
 
-This is where you put the contents of your *About* page. Like all your pages, it's in [Markdown](https://guides.github.com/features/mastering-markdown/) format.
 
