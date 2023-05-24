@@ -1,6 +1,7 @@
 # How to train and deploy a simple model using fastai.
-In this blog post, I'll be showing you how to leverage the fastai library to train a simple deep learning model and deploy it as a web app using Gradio. This post is based on Lesson 2 of the fast.ai course - to watch the online lecture video that was recorded for this lesson at UQ in 2022, go [here](https://course.fast.ai/Lessons/lesson2.html). To check out the corresponding chapter in the *Practical Deep Learning for Coders with fastai & PyTorch*, go [here](https://github.com/fastai/fastbook/blob/master/02_production.ipynb). This was a really cool lesson in the fast.ai course where Jeremy walks you through the process of building your own image classification model, how to perform data augmentation and clean up your data after training your model to improve your model's accuracy, and how to deploy your model as an interactive web app. This lesson is super practical and fun - which is wasy I chose to document my experience playing around with my own model and to show you how simple the process can be using the fastai library!
+In this blog post, I'll be showing you how to leverage the fastai library to train a simple deep learning model and deploy it as a web app using Gradio. This post is based on Lesson 2 of the fast.ai course - to watch the online lecture video that was recorded for this lesson at UQ in 2022, go [here](https://course.fast.ai/Lessons/lesson2.html). To check out the corresponding chapter in the *Practical Deep Learning for Coders with fastai & PyTorch*, go [here](https://github.com/fastai/fastbook/blob/master/02_production.ipynb). This was a really cool lesson in the fast.ai course where Jeremy walks you through the process of building your own image classification model, how to perform data augmentation and clean up your data after training your model to improve your model's accuracy, and how to deploy your model as an interactive web app. This lesson is super practical and fun - which is was why I chose to document my experience playing around with my own model and to show you how simple the process can be using the fastai library!
 
+---
 ## Step 0. Set-up your environment.
 I built my image classifier model and app using the VSCode Jupyter extension in GitHub's CodeSpaces. However, you could you just create a notebook in Kaggle, Google Colab or Jupyter Notebook (via Anaconda).
 Now, let's first install and import all the necessary libraries we'll need to train and deploy our deep learning model:
@@ -175,95 +176,15 @@ enable_queue=True
 gr.Interface(fn=predict,inputs=gr.inputs.Image(shape=(512, 512)),outputs=gr.outputs.Label(num_top_classes=3),title=title,description=description,examples=examples,interpretation=interpretation,enable_queue=enable_queue).launch(share=True)
 ```
 There should be two URLs in our output from which we can launch our Gradio web app. Let's click on one of them and try out our web app:
-![](/images/gradio_app.png "gradio web app")
+![](/images/gardio_app.png "gradio web app")
 There you go - you have just created your very own image classifier web app!
 
 I hope you've had just as much fun as I have in building this :)
 
-## Code
-
-General preformatted text:
-
-    # Do a thing
-    do_thing()
-
-Python code and output:
-
-```python
-# Prints '2'
-print(1+1)
-```
-
-Here's the table of contents:
-
-1. TOC
-{:toc}
-
-## Basic setup
-
-Jekyll requires blog post files to be named according to the following format:
-
-`YEAR-MONTH-DAY-filename.md`
-
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `filename` is whatever file name you choose, to remind yourself what this post is about. `.md` is the file extension for markdown files.
-
-The first line of the file should start with a single hash character, then a space, then your title. This is how you create a "*level 1 heading*" in markdown. Then you can create level 2, 3, etc headings as you wish but repeating the hash character, such as you see in the line `## File names` above.
-
-## Basic formatting
-
-You can use *italics*, **bold**, `code font text`, and create [links](https://www.markdownguide.org/cheat-sheet/). Here's a footnote [^1]. Here's a horizontal rule:
-
 ---
-
-## Lists
-
-Here's a list:
-
-- item 1
-- item 2
-
-And a numbered list:
-
-1. item 1
-1. item 2
-
-## Boxes and stuff
-
-> This is a quotation
-
-{% include alert.html text="You can include alert boxes" %}
-
-...and...
-
-{% include info.html text="You can include info boxes" %}
-
-## Images
-
-![](/images/logo.png "fast.ai's logo")
-
-## Code
-
-General preformatted text:
-
-    # Do a thing
-    do_thing()
-
-Python code and output:
-
-```python
-# Prints '2'
-print(1+1)
-```
-
-    2
-
-## Tables
-
-| Column 1 | Column 2 |
-|-|-|
-| A thing | Another thing |
-
-## Footnotes
-
-[^1]: This is the footnote.
+## Resources
+- Lesson 2 of the fast.ai course: https://course.fast.ai/Lessons/lesson2.html
+- Relevant book chapter: https://github.com/fastai/fastbook/blob/master/02_production.ipynb
+- Tutorial on using Gradio: https://www.tanishq.ai/blog/gradio_hf_spaces_tutorial
+- fastai docs: https://docs.fast.ai/
 
