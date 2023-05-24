@@ -1,4 +1,4 @@
 # About
-Hi, I'm Violet - a final year mechatronic engineering student at UQ in Queensland, Australia. I'm currently taking ELEC4630, a computer vision and image processing course at UQ and this is a blog about my experiences taking the fast.ai course by Jeremy Howard as part of ELEC4630. 
+Hi, I'm Violet - a final year mechatronic engineering student at The University of Queensland, Australia. I'm currently taking ELEC4630, a computer vision and image processing course at UQ and this is a blog about my experiences taking the fast.ai course by Jeremy Howard.
 
 
