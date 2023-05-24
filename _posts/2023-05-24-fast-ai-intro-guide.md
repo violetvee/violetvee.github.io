@@ -2,6 +2,10 @@
 In this blog post, I'll be showing you how to leverage the fastai library to train a simple deep learning model and deploy it as a web app using Gradio. This post is based on Lesson 2 of the fast.ai course - to watch the online lecture video that was recorded for this lesson at UQ in 2022, go [here](https://course.fast.ai/Lessons/lesson2.html). To check out the corresponding chapter in the *Practical Deep Learning for Coders with fastai & PyTorch*, go [here](https://github.com/fastai/fastbook/blob/master/02_production.ipynb). This was a really cool lesson in the fast.ai course where Jeremy walks you through the process of building your own image classification model, how to perform data augmentation and clean up your data after training your model to improve your model's accuracy, and how to deploy your model as an interactive web app. This lesson is super practical and fun - which is was why I chose to document my experience playing around with my own model and to show you how simple the process can be using the fastai library!
 
 ---
+# Let's build an Iron Man suit classifier!
+![](images/gradio_app_2.png)
+
+
 ## Step 0. Set-up your environment.
 I built my image classifier model and app using the VSCode Jupyter extension in GitHub's CodeSpaces. However, you could you just create a notebook in Kaggle, Google Colab or Jupyter Notebook (via Anaconda).
 Now, let's first install and import all the necessary libraries we'll need to train and deploy our deep learning model:
