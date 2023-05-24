@@ -3,7 +3,7 @@ In this blog post, I'll be showing you how to leverage the fastai library to tra
 
 ---
 # Let's build an Iron Man suit classifier!
-![](images/gradio_app_2.png)
+![](/images/gradio_app_2.png)
 
 
 ## Step 0. Set-up your environment.
