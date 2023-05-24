@@ -183,8 +183,8 @@ I hope you've had just as much fun as I have in building this :)
 
 ---
 ## Resources
-- Lesson 2 of the fast.ai course: https://course.fast.ai/Lessons/lesson2.html
-- Relevant book chapter: https://github.com/fastai/fastbook/blob/master/02_production.ipynb
-- Tutorial on using Gradio: https://www.tanishq.ai/blog/gradio_hf_spaces_tutorial
-- fastai docs: https://docs.fast.ai/
+- Lesson 2 of the fast.ai course: [https://course.fast.ai/Lessons/lesson2.html](https://course.fast.ai/Lessons/lesson2.html)
+- Relevant book chapter: [https://github.com/fastai/fastbook/blob/master/02_production.ipynb](https://github.com/fastai/fastbook/blob/master/02_production.ipynb)
+- Tutorial on using Gradio: [https://www.tanishq.ai/blog/gradio_hf_spaces_tutorial](https://www.tanishq.ai/blog/gradio_hf_spaces_tutorial)
+- fastai docs: [https://docs.fast.ai/](https://docs.fast.ai/)
 
