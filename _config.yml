@@ -21,12 +21,14 @@ use_math:
 google_analytics:
 
 # Everything below here can be ignored, unless you want to change the theme entirely
-theme: tactile
+theme: 
 plugins:
   - jekyll-feed
   - jekyll-gist
   - jekyll-octicons
   - jekyll-github-metadata
+  - jekyll-remote-theme 
+remote_theme: pages-themes/tactile@v0.2.0
 
 titles_from_headings:
   enabled:     true
