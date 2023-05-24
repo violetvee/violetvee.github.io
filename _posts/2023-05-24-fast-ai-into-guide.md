@@ -106,7 +106,79 @@ suits = DataBlock(
 dls = suits.dataloaders(path)
 dls.train.show_batch(max_n=8)
 ```
+Your output should show a sample batch of the images in your training set and should look something like this: 
+![](/images/ironman_dls_batch.jpg "sample of training images")
 
+## Step 3. Train our model.
+We can finally start training our model - yay! For this example, we'll train our model using the resnet18 CNN architecture, use error rate as our metric, and train for 3 epochs.
+```python
+learn = vision_learner(dls, resnet18, metrics=error_rate)
+learn.fine_tune(3)
+learn.loss_func
+```
+Once the model has finished training all epochs, the output should show the results of the training like this:
+![](/images/ironman_results.png "training results data")
+
+We were able to achieve roughly 77% accuracy after 3 epochs - which is not bad but it certainly could be better! To better understand why our model could be underperforming, let's see if we can get more insight into our training results.
+
+Running the below code will give us a matrix of the images used to validate our model and what the model predicted. The top line reveals the ground truth and the bottom line shows the prediction that the model made.
+```python
+learn.show_results()
+```
+![](/images/ironman_learn_results.png "learn.show_results()")
+
+From this, we can start to see where the model got confused... it looks like it had a bit of a hard time distinguishing between Iron Man Mark 1 and Mark 2 suits. Let's get some more information on our training results. Let's plot a confusion matrix to gain a better understanding of what our model found challenging to classify.
+```python
+interp = ClassificationInterpretation.from_learner(learn)
+interp.plot_confusion_matrix()
+```
+![](/images/ironman_confusion_matrix.png)
+
+Interestingly, we can see that most of the prediction mistakes were made on the Mark 1 and Mark 2 classes... which kind of makes sense, because they are quite similar in colour. Also, we can also see that there were considerably fewer images of the Mark 1 suits in our dataset. This might have affected our model's training performance in learning about the differences between Mark 1 and Mark 2.
+
+If we want to gain more information on our model's training performance, we could also plot the top losses and predictions it made using:
+```python
+interp.plot_top_losses(5, nrows=5)
+```
+But based on the results, we can see how important it is that our training and validation datasets need to be high quality. We also need to make sure that our model has enough images to train on, particularly when some of the classes are very similar and hard to distinguish between. 
+
+## Step 4. Deploy our model.
+Now, let's deploy our model into a web application using Gradio. Frist, we'll need to export and save our model so that it can be loaded into our prediction function.
+```python
+learn.export()
+# Let's check that the file exists, by using the ls method that fastai adds to Python's Path class:
+path = Path()
+path.ls(file_exts='.pkl')
+```
+Now, let's load our model:
+```python
+learn = load_learner('export.pkl')
+```
+Let's define a prediction function for our model:
+```python
+labels = learn.dls.vocab
+def predict(img):
+    img = PILImage.create(img)
+    pred,pred_idx,probs = learn.predict(img)
+    return {labels[i]: float(probs[i]) for i in range(len(labels))}
+```
+Now, let's make a Gradio interface to run our web app with:
+```python
+# Customizing Gradio app:
+
+title = "Iron Man Suit Classifier"
+description = "An Iron Man suit classifier trained on images downloaded using DuckDuckGo search API. Created as a solution demo for ELEC4630 A3 Q1."
+examples = [save_class_1, save_class_2, save_class_3, save_class_4]
+interpretation='default'
+enable_queue=True
+
+gr.Interface(fn=predict,inputs=gr.inputs.Image(shape=(512, 512)),outputs=gr.outputs.Label(num_top_classes=3),title=title,description=description,examples=examples,interpretation=interpretation,enable_queue=enable_queue).launch(share=True)
+```
+There should be two URLs in our output from which we can launch our Gradio web app. Let's click on one of them and try out our web app:
+![](/images/gradio_app.png "gradio web app")
+There you go - you have just created your very own image classifier web app!
+
+I hope you've had just as much fun as I have in building this :)
 
 ## Code
 
